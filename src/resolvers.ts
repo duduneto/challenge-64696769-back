@@ -20,7 +20,8 @@ module.exports = {
 
   Mutation: {
     createUser: async (context: any, request: any) => {
-      let respDB = await User.create({name: request.name, email: request.email})
+      console.log('REQUESTI INFO ===>', request);
+      let respDB = await User.create({user_name: request.user_name, user_cep: request.user_cep, user_add_street: request.user_add_street, user_add_number: request.user_add_number, user_add_bairro: request.user_add_bairro, user_city: request.user_city, user_uf: request.user_uf})
       console.log(respDB);
       return respDB
     },

@@ -1,13 +1,12 @@
 type User {
   id: ID!
-  name: String!
-  email: String!
-}
-type SpaceShip {
-  id: ID!
-  ownerId: ID!
-  name: String!
-  email: String!
+  user_name: String!, 
+    user_cep: String!,
+     user_add_street: String!,
+    user_add_number: String!,
+    user_add_bairro: String!,
+    user_city: String!,
+    user_uf: String!
 }
 
 type Query {
@@ -17,6 +16,14 @@ type Query {
 }
 
 type Mutation {
-  createUser(name: String!, email: String!): User
-  createSpaceShip(name: String!, codeSpace: String!): SpaceShip
+  createUser(
+    user_name: String!, 
+    user_cep: String!,
+     user_add_street: String!,
+    user_add_number: String!,
+    user_add_bairro: String!,
+    user_city: String!,
+    user_uf: String!
+    ): User
+    
 }
