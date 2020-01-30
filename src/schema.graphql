@@ -1,0 +1,22 @@
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+type SpaceShip {
+  id: ID!
+  ownerId: ID!
+  name: String!
+  email: String!
+}
+
+type Query {
+  users: [User!]!
+  user(id: ID!): User
+  userByField(field: String!, value: String!): User
+}
+
+type Mutation {
+  createUser(name: String!, email: String!): User
+  createSpaceShip(name: String!, codeSpace: String!): SpaceShip
+}
